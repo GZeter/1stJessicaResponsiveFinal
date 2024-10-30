@@ -1,0 +1,130 @@
+:root {
+  /* colors */
+  --color-dark: hsl(0, 0%, 20%);
+  --color-darker: hsl(0, 0%, 12%);
+  --color-darkerst: hsl(0, 0%, 8%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-green: hsl(75, 94%, 57%);
+}
+
+body {
+  font-family: Inter, serif;
+  background-color: var(--color-darkerst);
+  width: 100%;
+}
+
+.container {
+  background-color: var(--color-darker);
+  width: 90%;
+  max-width: 500px;
+  height: 700px;
+  margin: 50px auto;
+  margin-top: 100px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 20px;
+}
+
+.main-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+.profile img {
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+  /* position: absolute; */
+  /* transform: translateY(-150px); */
+  /* margin-left: 75px; */
+}
+
+.h1 {
+  margin: 20px 0 0 0;
+}
+
+.top-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-50px);
+}
+
+.bottom-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.colored {
+  color: var(--color-green);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: normal;
+}
+.boxes {
+  display: grid;
+  margin-top: -50px;
+  gap: 15px;
+  /* grid-template-rows: fit-content(200px); */
+  /* grid-template: fit-content(50px) / 100px; */
+  place-items: center;
+}
+
+.box {
+  height: 50px;
+  width: 200%;
+  background-color: var(--color-dark);
+  border-radius: 5px;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 15px;
+  font-weight: bold;
+}
+
+.box:hover {
+  cursor: pointer;
+  background-color: var(--color-green);
+  color: var(--color-darkerst);
+  transition: 0.2s ease-in-out;
+}
+
+@media (max-width: 1440px) {
+  .container {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    font-size: 0.7rem;
+  }
+
+  .profile img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .box[class*=box] {
+    height: 40px;
+    width: 150%;
+  }
+
+  h4 {
+    font-size: 15px;
+    margin-top: 0;
+  }
+}
